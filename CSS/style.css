@@ -1,62 +1,55 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-body {
-    background-color: #222;
-    color: white;
-    padding: 1rem;
-}
-
-/*  container */
-
-.container,
-.buttonContainer {
+.container {
     display: flex;
+    width: 100rem;
     justify-content: center;
-    align-items: center;
-    margin: 0 auto;
 }
 
-/* ********************** */
-
-h1 {
-    padding: 2rem;
-    text-align: center;
-}
-
-button {
+/* i componenti di card sono inseriti al suo interno */
+.slide {
     padding: 0.5rem;
-    margin: 1rem;
-    border-radius: 100%;
-    border: 0.1rem solid white;
+    display: none;
+    .card-img {
+        img {
+            width: 30rem;
+            height: 30rem;
+            object-fit: cover;
+            object-position: top right;
+        }
+    }
+
+    .info-container {
+        width: 30rem;
+        position: absolute;
+        padding: 0.5rem;
+        top: 30rem;
+        color: rgba(255, 255, 255, 0);
+    }
 }
 
-/* - applico object-fit */
-.card {
-    text-align: center;
+/* all'hover su card apparirà il contenitore info inizialmente trasparente */
+.slide:hover {
+    .info-container {
+        color: rgba(250, 235, 215, 0.899);
+        background-color: rgba(0, 0, 0, 0.46);
+    }
 }
-
-
-img {
-    display: flex;
-    margin: 0 auto;
-    width: 35rem;
-    height: 35rem;
-    object-fit: cover;
-    /* display: none; */
-}
-
-.objectFit {
-    object-position: right;
-}
-
-/* ******************************** */
-
 
 .active {
     display: block;
+}
+
+button {
+    width: 4rem;
+}
+
+#prev {
+    position: absolute;
+    top: 23rem;
+    left: 20rem;
+}
+
+#next {
+    position: absolute;
+    top: 23rem;
+    right: 20rem;
 }
