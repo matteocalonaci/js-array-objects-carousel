@@ -4,7 +4,7 @@ const images = [
     // oggetto 0
     {
         image: 'img/01.webp',
-        title: 'Marvel\'s Spiderman Miles Morale',
+        title: 'Marvel\'s Spiderman Miles Morales',
         text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
     },
     // oggetto 1
@@ -101,3 +101,12 @@ let next = document.getElementById("next").addEventListener("click",
         // aggiungo la classe active alla slide dopo
         document.querySelectorAll(".slide")[slideSelected].classList.add("active");
     })
+
+
+let aarray = [
+    'ugo',
+    'marco',
+    'luca',
+]
+
+console.log(aarray.length)
